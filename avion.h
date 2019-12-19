@@ -38,7 +38,7 @@ public:
   bool shot(); // renvoie 1 si  a tiré sur un ennemi
                // dans ce cas il faut destroy l'avion visé et le supprimer de la liste des avion du monde
   bool cap_valide(std::vector<int> nouv_cap);
-  std::vector <std::vector<int>> vectorvalide();
+  std::vector <std::vector<int> > vectorvalide();
 
   // Destructeur
   ~avion(){};

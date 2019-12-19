@@ -67,7 +67,7 @@ void avionUser::strategy(monde world){
       case 0:
       {
         int a=cap[0],b=cap[1],c=cap[2];
-        vector<vector<int>> possibilite {{a,b,c},{a,0,0},{0,b,0},{0,0,c},{a,b,0},{a,0,c},{0,b,c}}; // liste de tous les veteurs possibles
+        vector<vector<int> > possibilite {{a,b,c},{a,0,0},{0,b,0},{0,0,c},{a,b,0},{a,0,c},{0,b,c}}; // liste de tous les veteurs possibles
         cap=possibilite[random()%7]; //on en choisit un au hasard
 
     }
@@ -159,7 +159,7 @@ void avionIA::strategy(monde mondeAvions){
       //on a notre avion ennemi le plus proche, calculons le cap
     }
   }
-  vector <vector<int>> v=vectorvalide();  // pas encore défini
+  vector <vector<int> > v=vectorvalide();  // pas encore défini
   float minparcours=100000.0f;   //on va regarder quel cap va minimiser la norme
   int mincap;
   for (int i = 0; i < count; i++) {
@@ -176,7 +176,7 @@ float norm(vector<int> v1, vector<int> v2){
   return(sqrt(pow((v1[0]-v2[0]),2)+pow((v1[1]-v2[1]),2)+pow((v1[2]-v2[2]),2)));
 }
 
-vector <vector<int>> avion::vectorvalide(){
+vector <vector<int> > avion::vectorvalide(){
   vector v;
   for (int i = -1; i < 2; i++) {
     for (int j = -1; j < 2; j++) {
