@@ -1,4 +1,7 @@
+#include <vector>
 #include "monde.h"
+#include "avion.h"
+
 using namespace std;
 
 
@@ -17,6 +20,7 @@ void monde::supprimerAvion(avion* Avion){
       listeAvions.erase (listeAvions.begin()+i);
     }
   }
+  // remarque GM: un destructeur ne peut être appelé que par delete 
   Avion->~avion();
 }
 
