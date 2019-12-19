@@ -135,7 +135,7 @@ void avionUser::strategy(monde world){
         case 0:
         {
           int a=cap[0],b=cap[1],c=cap[2];
-          vector<vector<int>> possibilite= {{a,b,c},{a,0,0},{0,b,0},{0,0,c},{a,b,0},{a,0,c},{0,b,c}}; // liste de tous les veteurs possibles
+          vector<vector<int> > possibilite= {{a,b,c},{a,0,0},{0,b,0},{0,0,c},{a,b,0},{a,0,c},{0,b,c}}; // liste de tous les veteurs possibles
           return(possibilite.end() != find(possibilite.begin(), possibilite.end(), nouv_cap));//include algorithm
           //on retourn vrai si le nouveau cap appartient aux possibilités
         }
